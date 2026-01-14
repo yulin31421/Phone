@@ -230,7 +230,7 @@ const App: React.FC = () => {
               <div className="bg-white p-5 rounded-2xl shadow-sm border">
                 <p className="text-xs font-bold text-slate-400 uppercase">總持有成本 (TCO)</p>
                 <p className="text-2xl font-bold text-blue-600 mt-1">NT$ {calculation.totalCostOfOwnership.toLocaleString()}</p>
-                <p className="text-xs text-slate-500 mt-1">含資費 + 手機專案價</p>
+                <p className="text-[10px] text-slate-400 mt-1 italic">公式: 合約購機價 + 門號總月租費</p>
               </div>
               <div className="bg-white p-5 rounded-2xl shadow-sm border">
                 <p className="text-xs font-bold text-slate-400 uppercase">初期應付總額</p>
@@ -284,7 +284,10 @@ const App: React.FC = () => {
                     <span className="font-mono text-slate-800">NT$ {calculation.totalContractCost.toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between items-center pt-4">
-                    <span className="text-slate-900 font-bold text-lg">總持有成本 (TCO)</span>
+                    <div className="flex flex-col">
+                      <span className="text-slate-900 font-bold text-lg">總持有成本 (TCO)</span>
+                      <span className="text-[10px] text-slate-400 italic">計算方式: 合約購機價 + 門號總月租費</span>
+                    </div>
                     <span className="font-mono text-blue-600 font-bold text-xl">NT$ {calculation.totalCostOfOwnership.toLocaleString()}</span>
                   </div>
                </div>
